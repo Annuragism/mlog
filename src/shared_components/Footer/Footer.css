@@ -1,0 +1,10 @@
+.footer{
+    background-color: #000 !important;
+    min-height: Calc(60vh - 250px);
+    margin-top:5px !important;
+}
+
+
+.footer-text{
+
+}

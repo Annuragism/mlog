@@ -1,0 +1,27 @@
+.Banner{
+    background-color: #FFF !important;
+    min-height: calc(100% - 80%) !important;
+    margin-top: 10px;
+    /* background-image: url('https://www.mydomaine.com/thmb/2j6j1hJ_5hWHZDt9eEtH-AXSNTk=/1280x397/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/organized-spotlight-1bc6ef604bf348c08825c9021a7ef7a4.jpg');
+    background-repeat: no-repeat; */
+}
+.Banner-content{
+    display:flex;
+    justify-content: center;
+}
+
+.banner_img_wrapper{
+    position: relative;
+/* height: calc(100vh - 75px) !important; */
+
+}
+
+
+.Banner-card__content {
+height:60%;
+width:30%;
+background-color: #FFF;
+position:absolute;
+top:Calc(100% - 85%);
+left:Calc(100% - 90%)
+}

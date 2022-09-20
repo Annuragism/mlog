@@ -1,0 +1,81 @@
+body{
+    background-color: #f4f4f4 !important;
+    
+}
+
+.MainLayout{
+    background-color: #f4f4f4 !important;
+    min-height: calc(100vh - 75px) !important;
+    margin-right: 250px;
+    margin-left: 250px;
+    margin-top: 10px;
+    /* box-shadow: 0 0 2px 0px #141414; */
+    border-radius: 5px;
+    padding: 20px;
+    font-family: "Renner*",Helvetica,sans-serif
+}
+
+
+.mainlayout-card-block{
+display:flex;
+flex-wrap:wrap;
+justify-content: center
+}
+
+.mainlayout-card-block
+.mainlayout-cards
+.mainlayout-card-content
+.mainlayout-card-content-heading{
+font-size: 25px !important;
+}
+
+
+.mainlayout-card-img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .15s ease-in-out;
+    overflow: hidden;
+}
+.mainlayout-card-img:hover img{
+	-webkit-transform: scale(1.1);
+	transition: .3s ease-in-out;
+	-webkit-transition: .3s ease-in-out;
+	transform: scale(1.1);
+}
+
+
+
+
+
+.mainlayout-card-block
+.mainlayout-cards
+{
+/* box-shadow: 0 0 2px 0px #141414; */
+background-color: #FFF !important;
+min-height: 450px !important;
+margin:10px;
+border-radius: 5px;
+overflow: hidden;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    .MainLayout{
+    background-color: #FFF !important;
+        margin-right: calc(100vw - 95vw) !important;
+    margin-left: calc(100vw - 95vw) !important;
+    
+}
+
+}
