@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BlogDetails from "../components/BlogDetails/BlogDetails";
 import LandingPage from "../components/LandingPage/LandingPage";
 import NotFound from "../components/NotFound/NotFound";
 import MainLayout from "../shared_components/MainLayout/MainLayout";
@@ -9,6 +10,7 @@ function RouterConfig() {
         <Routes>
                 <Route path="/" element={<LandingPage />} >
                     <Route path="home" element={<MainLayout />} />
+                    <Route path="blog" element={<BlogDetails />} />
                     <Route path="expenses" element={<Expenses />} />
                     <Route path="invoices" element={<Invoices />} />
                  </Route>   
