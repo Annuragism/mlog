@@ -12,8 +12,8 @@ function NotFound() {
                 style={{ width: "250px", borderRadius: "50%", boxShadow: "6px 8px 12px black" }}
                 src="https://flxt.tmsimg.com/assets/p34757_p_v8_aa.jpg"
         alt="not found"
-
             />
+            <h2>404 - Page Not Found</h2>
         </div>
     )
 }

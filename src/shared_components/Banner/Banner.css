@@ -1,7 +1,7 @@
 .Banner{
     background-color: #FFF !important;
-    min-height: calc(100% - 80%) !important;
-    margin-top: 10px;
+    /* min-height: calc(100% - 80%) !important; */
+    margin-top: 70px;
     /* background-image: url('https://www.mydomaine.com/thmb/2j6j1hJ_5hWHZDt9eEtH-AXSNTk=/1280x397/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/organized-spotlight-1bc6ef604bf348c08825c9021a7ef7a4.jpg');
     background-repeat: no-repeat; */
 }

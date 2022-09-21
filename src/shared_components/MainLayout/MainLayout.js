@@ -1,33 +1,47 @@
+import { useNavigate } from 'react-router-dom';
 import './MainLayout.css'
-
+import Banner from "../../shared_components/Banner/Banner";
 
 const MainLayout = () => {
-   const arr = Array.apply(null, Array(12)).map(function () {return true})
-  return <div className="MainLayout">
+  const history = useNavigate();
+   const arr = Array.apply(null, Array(12)).map(function (item,ind) {return "Page " + ind})
+  return <>
+            <Banner/>
+    <div className="MainLayout" >
     <div className="">
        <h2>Today's Top Stories</h2>
     </div>
     <div className="mainlayout-card-block">
       {
         arr?.map((b,index) => {
-          return  <div className="mainlayout-cards">
-            <div className="mainlayout-card-img" key={index}>
+          return <div className="mainlayout-cards"
+          key={index}
+            onClick={() => history({
+            pathname: "/blog",
+            search: `?id=${b}`,
+          })
+          }
+          >
+            <div className="mainlayout-card-img"
+            >
           <img
-            src="https://www.mydomaine.com/thmb/xgKunfcTO1W6KsjT7hP4hPke4Ss=/380x251/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fall-design-trends-12-katie-leclercq-artist-01fe1f74822143c6a32042d7d808e157.jpeg"
-            alt="not found"
-            height="100%"
-            width="100%"
+            src="https://source.unsplash.com/random"
+                alt="not found"
+                width="100%"
+                
           />
         </div>
            <div className="mainlayout-card-content">
           <div className="mainlayout-card-content-heading">
             <span>Home Trends</span>
           </div>
-          <div className="card-title">
-            Title
+          <div className="card-category">
+            Category
           </div>
              <div className="card-desc">
-            Description
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur fermentum massa, ut volutpat justo maximus convallis. Vivamus nec neque in erat lobortis egestas ac sed orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis sit amet lacinia elit, vitae pharetra lectus. Pellentesque efficitur a neque vitae ultrices.
+
+
           </div>
            </div>
       </div>  
@@ -36,5 +50,6 @@ const MainLayout = () => {
       }
   </div>
   </div>
+</>
 };
 export default MainLayout;

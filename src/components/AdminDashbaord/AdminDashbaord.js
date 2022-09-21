@@ -1,23 +1,18 @@
-import './LandingPage.css'
+import './AdminDashbaord.css'
 import Header from '../../shared_components/Header/Header';
 import Footer from '../../shared_components/Footer/Footer';
 import MainLayout from "../../shared_components/MainLayout/MainLayout";
+import Banner from "../../shared_components/Banner/Banner";
 import { Outlet, useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function LandingPage() {
+function AdminDashbaord() {
     const location = useLocation()
 
     return (
-        location?.pathname == "/" ?
-        <Navigate to="/home" replace />
-        :
         <div>
-            <Header />
-            {/* < MainLayout/> */}
-            < Outlet />
-            <Footer/>
-        </div>
+            AdminDashbaord
+       </div>
     )
 }
-export default LandingPage
+export default AdminDashbaord
