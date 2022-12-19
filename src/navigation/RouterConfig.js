@@ -1,19 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 //components
+import Admin from "../components/Admin/Admin";
+import AdminDashbaord from "../components/AdminDashbaord/AdminDashbaord";
+import AdminLogin from "../components/AdminLogin/AdminLogin";
+import Blog from "../components/Blog/Blog";
 import BlogDetails from "../components/BlogDetails/BlogDetails";
 import LandingPage from "../components/LandingPage/LandingPage";
 import NotFound from "../components/NotFound/NotFound";
-import AdminLogin from "../components/AdminLogin/AdminLogin";
-import Admin from "../components/Admin/Admin";
-import Blog from "../components/Blog/Blog";
-import AdminDashbaord from "../components/AdminDashbaord/AdminDashbaord";
+import SignUp from "../components/Signup/SignupPage";
 
 //shared_components
 import MainLayout from "../shared_components/MainLayout/MainLayout";
 
 //Extras
 
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 //Function Start
 function RouterConfig() {
@@ -29,6 +30,7 @@ function RouterConfig() {
                     <Route path="blog" element={<Blog history={history} />} />
                 </Route>
             <Route path="adminlogin" element={<AdminLogin history={history} />} />
+            <Route path="sign-up" element={<SignUp history={history} />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )
