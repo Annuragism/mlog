@@ -15,6 +15,7 @@ import MainLayout from "../shared_components/MainLayout/MainLayout";
 //Extras
 
 import { useNavigate } from 'react-router-dom';
+import ProtectedRoute from "./ProtectedRoutes";
 
 //Function Start
 function RouterConfig() {
@@ -26,10 +27,10 @@ function RouterConfig() {
                 <Route path="blog" element={<BlogDetails  history={history} />} />
             </Route>
             <Route path="admin" element={<Admin history={history} />} >
-                    <Route path="dashboard" element={<AdminDashbaord history={history} />} />
-                    <Route path="blog" element={<Blog history={history} />} />
-                </Route>
-            <Route path="adminlogin" element={<AdminLogin history={history} />} />
+                <Route path="dashboard" element={<AdminDashbaord history={history} />} />
+                <Route path="blog" element={<Blog history={history} />} />
+            </Route>
+            <Route path="login" element={<AdminLogin history={history} />} />
             <Route path="sign-up" element={<SignUp history={history} />} />
             <Route path="*" element={<NotFound />} />
         </Routes>

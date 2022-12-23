@@ -1,7 +1,7 @@
 import './AdminLogin.css'
 import Header from '../../shared_components/Header/Header';
 import Footer from '../../shared_components/Footer/Footer';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 //Matarial Things
 import * as React from 'react';
@@ -11,7 +11,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -118,7 +117,7 @@ export default function SignInSide() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link to="/sign-up">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

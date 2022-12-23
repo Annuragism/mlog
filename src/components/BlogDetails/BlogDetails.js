@@ -9,7 +9,6 @@ export default function BlogDetails() {
     <div className="blog-wrapper">
         <h1>
             {name}
-            
         </h1>
     </div>
   )
