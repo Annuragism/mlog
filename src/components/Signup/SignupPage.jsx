@@ -27,6 +27,12 @@ export default function SignUp() {
 			email: data.get('email'),
 			password: data.get('password'),
 		});
+		if( formData.password !== formData["confirm-password"] ){
+			alert("Password is not matching !")
+		}
+		else{
+			fetch("http://localhost:3109/")
+		}
 	};
 
 	const setToFormData = (e) => {
@@ -76,7 +82,7 @@ export default function SignUp() {
 						</Typography>
 						<Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }} >
 							<label htmlFor="user-image">
-								<Typography variant='h5' textAlign="center" >Image</Typography>
+								<Typography variant='h5' textAlign="center" >User Image</Typography>
 
 								<Avatar
 									sx={{
@@ -96,10 +102,42 @@ export default function SignUp() {
 								/>
 								<Typography textAlign="center">
 									<Typography component="span" variant='button' className='pointer' >Add</Typography>
-									<Typography component="span" variant='button' className='pointer' color="red" marginLeft="8px" onClick={() => (setFormData["user-image"] = undefined)} >Remove</Typography>
+									<Typography component="span" variant='button' className='pointer' color="red" marginLeft="8px" onClick={(e) =>{ e.stopPropagation(); e.preventDefault(); setFormData({ ...formData, "user-image": undefined }) }} >Remove</Typography>
 								</Typography>
 							</label>
-
+							{/* <Typography >  */}
+								<TextField
+									margin="normal"
+									required
+									fullWidth
+									id="firstname"
+									label="First Name"
+									name="first_name"
+									autoComplete="firstname"
+									autoFocus
+									onChange={setToFormData}
+								/>
+								<TextField
+									margin="normal"
+									id="middlename"
+									label="Middle Name"
+									name="middle_name"
+									fullWidth
+									autoComplete="middlename"
+									autoFocus
+									onChange={setToFormData}
+								/>
+								<TextField
+									margin="normal"
+									id="lastname"
+									label="Last Name"
+									name="last_name"
+									fullWidth
+									autoComplete="lastname"
+									autoFocus
+									onChange={setToFormData}
+								/>
+							 {/* </Typography> */}
 							<TextField
 								margin="normal"
 								required
@@ -125,7 +163,7 @@ export default function SignUp() {
 								margin="normal"
 								required
 								fullWidth
-								name="password"
+								name="passcode"
 								label="Password"
 								type="password"
 								id="password"
@@ -141,7 +179,7 @@ export default function SignUp() {
 								label="Confirm-Password"
 								type="password"
 								id="confirm-password"
-							// onChange={ e =>  }
+							 	onChange={setToFormData}
 							/>
 
 							<Button
@@ -154,7 +192,7 @@ export default function SignUp() {
 							</Button>
 							<Grid container>
 								<Grid item xs>
-									<Link href="#" variant="body2">
+									<Link href="login" >
 										Already have an account?
 									</Link>
 								</Grid>
